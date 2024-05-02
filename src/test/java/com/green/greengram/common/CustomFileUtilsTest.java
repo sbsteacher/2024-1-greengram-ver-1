@@ -24,4 +24,19 @@ class CustomFileUtilsTest {
         String result = utils.makeFolders("ddd2");
         System.out.println("result: " + result);
     }
+
+    @Test
+    void makeRandomFileName() {
+        String result = utils.makeRandomFileName();
+        System.out.println("=======================================");
+        System.out.println("makeRandomFileName: "+ result); //34자
+        System.out.println("=======================================");
+    }
+
+    @Test
+    void getExt() {
+        String ext = utils.getExt("abcde.ddd.jpg.sadklsdklsdaklj.png");
+        System.out.println("ext: " + ext);
+    }
+
 }
