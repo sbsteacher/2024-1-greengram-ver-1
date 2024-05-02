@@ -12,7 +12,7 @@ CREATE TABLE feed (
     , writer_id BIGINT NOT NULL
     , contents VARCHAR(1000)
     , location VARCHAR(30)
-    , created_at DAgreengram2024_v1TETIME NOT NULL DEFAULT current_timestamp
+    , created_at DATETIME NOT NULL DEFAULT current_timestamp
     , updated_at DATETIME ON UPDATE current_timestamp
 );
 
