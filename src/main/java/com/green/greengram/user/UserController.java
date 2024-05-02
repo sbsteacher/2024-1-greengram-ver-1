@@ -15,9 +15,10 @@ import org.springframework.web.multipart.MultipartFile;
 public class UserController {
     private final UserService service;
 
+
     @PostMapping
     public ResultDto<Integer> postUser(@RequestPart(required = false) MultipartFile pic
-            , @RequestPart SignUpPostReq p) {
+                                    , @RequestPart SignUpPostReq p) {
         log.info("pic: {}", pic);
         log.info("p: {}", p);
         int result = service.postUser(pic, p);
@@ -27,6 +28,5 @@ public class UserController {
                 .resultMsg("회원가입 성공")
                 .resultData(result)
                 .build();
-
     }
 }
