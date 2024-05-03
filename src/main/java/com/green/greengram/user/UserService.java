@@ -21,6 +21,7 @@ public class UserService {
         String saveFileName = customFileUtils.makeRandomFileName(pic);
         p.setPic(saveFileName);
         int result = mapper.postUser(p);
+        if(pic == null) { return result; }
         try {
             String path = String.format("user/%d", p.getUserId());
             customFileUtils.makeFolders(path);

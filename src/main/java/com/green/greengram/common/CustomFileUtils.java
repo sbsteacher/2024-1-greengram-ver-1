@@ -43,7 +43,7 @@ public class CustomFileUtils {
 
     //랜덤 파일명 with 확장자 만들기  using MultipartFile
     public String makeRandomFileName(MultipartFile mf) {
-        return makeRandomFileName(mf.getOriginalFilename());
+        return mf == null ? null : makeRandomFileName(mf.getOriginalFilename());
     }
 
     //파일 저장 (target: 경로/파일명)
