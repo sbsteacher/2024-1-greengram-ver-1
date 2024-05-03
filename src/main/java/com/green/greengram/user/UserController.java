@@ -15,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class UserController {
     private final UserService service;
 
-    @PostMapping
+    @PostMapping("sign-up")
     public ResultDto<Integer> postUser(@RequestPart(required = false) MultipartFile pic
                                     , @RequestPart SignUpPostReq p) {
         log.info("pic: {}", pic);

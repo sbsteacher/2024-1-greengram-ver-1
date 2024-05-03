@@ -16,7 +16,7 @@ public class UserService {
     private final CustomFileUtils customFileUtils;
 
     @Transactional
-    public int postUser(MultipartFile pic, SignUpPostReq p) {
+    public int postUser(MultipartFile pic, SignUpPostReq p)  {
         //프로필 이미지 파일 처리
         String saveFileName = customFileUtils.makeRandomFileName(pic);
         p.setPic(saveFileName);
@@ -28,8 +28,8 @@ public class UserService {
             customFileUtils.transferTo(pic, target);
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException("파일 오류");
         }
-
         return result;
     }
 
