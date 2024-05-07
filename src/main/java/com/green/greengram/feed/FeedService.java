@@ -33,6 +33,7 @@ public class FeedService {
                 String target = String.format("%s/%s", path, saveFileName);
                 customFileUtils.transferTo(pic, target);
             }
+            int affectedRowsPics = mapper.postFeedPics(picDto);
 
         } catch (Exception e) {
             e.printStackTrace();

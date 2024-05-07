@@ -18,6 +18,11 @@
         <foreach item="item" collection="fileNames" separator=",">
             ( #{feedId}, #{item} )
         </foreach>
+
+<!--        <foreach item="item" collection="fileNames"-->
+<!--                 open="(" separator="),(" close=")">-->
+<!--            {feedId}, {item}-->
+<!--        </foreach>-->
     </insert>
 
 </mapper>

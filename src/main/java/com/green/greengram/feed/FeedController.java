@@ -26,7 +26,7 @@ public class FeedController {
     @PostMapping
     @Operation(summary = "Feed 등록", description = "")
     public ResultDto<Long> postFeed(@RequestPart List<MultipartFile> pics, @RequestPart FeedPostReq p) {
-        long result = 0L;
+        long result = service.postFeed(pics, p);
 
         return ResultDto.<Long>builder()
                 .statusCode(HttpStatus.OK)

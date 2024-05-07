@@ -14,3 +14,38 @@ public class FeedPicPostDto {
     private List<String> fileNames = new ArrayList();
     //"a.jpg", "b.jpg", "c.jpg"
 }
+/*
+        INSERT INTO feed_pics
+        ( feed_id, pic )
+        VALUES
+        ( 10, 'a.jpg' )
+        , ( 10, 'b.jpg' )
+        , ( 10, 'c.jpg' )
+
+
+        <foreach item="item" collection="fileNames"
+                 open="(" separator="),(" close=")">
+            #{feedId}, #{item}
+        </foreach>
+
+        INSERT INTO feed_pics
+        ( feed_id, pic )
+        VALUES
+        ( 10, 'a.jpg'
+        ),( 10, 'b.jpg'
+        ),( 10, 'c.jpg' )
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+

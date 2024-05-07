@@ -5,7 +5,7 @@ CREATE TABLE USER (
     , uid VARCHAR(20) UNIQUE NOT NULL
     , upw VARCHAR(100) NOT NULL
     , nm VARCHAR(20) NOT NULL
-    , pic VARCHAR(50)
+    , pic VARCHAR(70)
     , created_at DATETIME NOT NULL DEFAULT current_timestamp
     , updated_at DATETIME ON UPDATE current_timestamp
 );
@@ -21,6 +21,6 @@ CREATE TABLE feed (
 CREATE TABLE feed_pics(
       feed_pic_id BIGINT AUTO_INCREMENT PRIMARY KEY
     , feed_id BIGINT NOT NULL
-    , pic VARCHAR(30) NOT NULL
+    , pic VARCHAR(70) NOT NULL
     , created_at DATETIME NOT NULL DEFAULT current_timestamp
 );
