@@ -35,4 +35,10 @@
          LIMIT #{startIdx}, #{len}
     </select>
 
+    <select id="getFeedPicsByFeedId">
+        SELECT pic
+          FROM feed_pics
+         WHERE feed_id = #{feedId}
+    </select>
+
 </mapper>

@@ -45,6 +45,11 @@ public class FeedService {
     }
 
     public List<FeedGetRes> getFeed(FeedGetReq p) {
-        return mapper.getFeed(p);
+        List<FeedGetRes> list = mapper.getFeed(p);
+        for(FeedGetRes res : list) {
+            List<String> pics = mapper.getFeedPicsByFeedId(res.getFeedId());
+            res.setPics(pics);
+        }
+        return list;
     }
 }

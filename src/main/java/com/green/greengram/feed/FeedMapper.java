@@ -13,4 +13,5 @@ public interface FeedMapper {
     int postFeed(FeedPostReq p);
     int postFeedPics(FeedPicPostDto p);
     List<FeedGetRes> getFeed(FeedGetReq p);
+    List<String> getFeedPicsByFeedId(long feedId);
 }
